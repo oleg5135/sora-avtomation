@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Sora Prompt Queue",
+  "version": "1.0.0",
+  "description": "Черга промптів для Sora: вставка тексту і автоматичне натискання Create.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://sora.chatgpt.com/*"
+  ],
+  "action": {
+    "default_title": "Sora Queue",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sora.chatgpt.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

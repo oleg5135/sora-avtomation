@@ -1,0 +1,157 @@
+:root {
+  --bg: #eef2f7;
+  --text: #0f172a;
+  --muted: #52607a;
+  --line: #c8d2e1;
+  --panel: #ffffff;
+  --brand: #0b5ecf;
+  --brand-strong: #0a4eac;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 430px;
+  background:
+    radial-gradient(120px 80px at 20% 0%, #d7e8ff 0%, transparent 80%),
+    radial-gradient(120px 80px at 85% 0%, #dbece3 0%, transparent 80%),
+    var(--bg);
+  color: var(--text);
+  font: 14px/1.45 "Segoe UI", Tahoma, sans-serif;
+}
+
+.app {
+  padding: 12px;
+}
+
+.hero {
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  padding: 10px;
+  box-shadow: 0 10px 24px rgb(15 23 42 / 8%);
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.file-info {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+textarea,
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 8px 10px;
+  color: var(--text);
+  transition: border-color 120ms ease;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+textarea {
+  height: 175px;
+  resize: vertical;
+}
+
+.meta {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.field {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn {
+  border: 1px solid #9fb0c8;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  padding: 7px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #f8fbff;
+}
+
+.btn-primary {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-strong);
+}
+
+.btn-soft {
+  border-color: #d3dbe8;
+  color: #334155;
+}
+
+.status {
+  margin: 10px 2px 0;
+  min-height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hint {
+  margin: 4px 2px 0;
+  color: var(--muted);
+  font-size: 11px;
+}

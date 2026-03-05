@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python / local tooling
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Local run artifacts
+*.log
+*.tmp
+*.bak
+
+# Browser/profile/session data (must never be committed)
+chrome_debug_profile/
+User Data/
+Profile */
+Default/
+
+# Archives
+*.zip
+*.7z
+*.rar

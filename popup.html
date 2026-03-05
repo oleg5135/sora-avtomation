@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sora Queue</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>Sora Queue</h1>
+      <p class="subtitle">Автовідправка промптів у Sora</p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <button id="pickFileBtn" class="btn">Вибрати .txt</button>
+        <button id="clearBtn" class="btn btn-soft">Очистити</button>
+        <input id="fileInput" type="file" accept=".txt,text/plain" hidden>
+      </div>
+      <p id="fileInfo" class="file-info">Файл не вибрано</p>
+
+      <label class="label" for="prompts">Промпти (1 рядок = 1 промпт)</label>
+      <textarea id="prompts" placeholder="Наприклад:
+Кіберпанк нічне місто, дощ, неон
+Фотореалістичний портрет собаки на пляжі"></textarea>
+      <p id="promptCount" class="meta">Кількість промптів: 0</p>
+
+      <div class="row">
+        <div class="field">
+          <label class="label" for="delaySec">Затримка (сек)</label>
+          <input id="delaySec" type="number" min="0" step="0.5" value="2">
+        </div>
+        <div class="field">
+          <label class="label" for="timeoutSec">Timeout (сек)</label>
+          <input id="timeoutSec" type="number" min="5" step="1" value="90">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="btn btn-primary">Запустити</button>
+        <button id="stopBtn" class="btn">Стоп</button>
+      </div>
+    </section>
+
+    <p id="status" class="status">Готово.</p>
+    <p class="hint">Працює тільки на вкладці `sora.chatgpt.com`.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
